@@ -14,10 +14,16 @@ if (playerOne > pcGame) {
 
 // esercizio mail
 
-const usersList = []
+const usersList = ['tieri.riccardo@gmail.com']
 let userMail 
 
 document.querySelector('button').addEventListener('click', function(){
   userMail = document.getElementById('email_input').value
-  console.log(userMail)
+  for (let i = 0; i < usersList.length ; i++ ){
+    if (usersList[i] === userMail){
+      alert('Access Granted')
+    } else {
+      alert('Access Denied')
+    }
+  }
 } )
